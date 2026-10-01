@@ -48,10 +48,14 @@ export default function Navbar() {
           <a 
             href="#hero" 
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex items-center gap-2 group cursor-pointer"
+            className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm group-hover:bg-indigo-600 transition-colors">
-              T
+            <div className="w-8.5 h-8.5 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm group-hover:bg-indigo-600 transition-colors shadow-xs overflow-hidden p-1.5">
+              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 22 26 H 78 V 38 H 56 V 76 H 44 V 38 H 22 V 26 Z" fill="currentColor"/>
+                <rect x="58" y="48" width="18" height="28" rx="6" fill="#818cf8"/>
+                <circle cx="67" cy="32" r="5" fill="#a5b4fc"/>
+              </svg>
             </div>
             <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900">
               Think<span className="text-indigo-600">Build</span>
