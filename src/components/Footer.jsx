@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
 import { FaLinkedinIn, FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
@@ -16,10 +15,6 @@ export default function Footer() {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-[#faf8f5] border-t border-slate-200 text-slate-600 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-200 items-start">
           
           {/* Col 1: Brand & Wordmark */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-7 space-y-5 flex flex-col items-center lg:items-start text-center lg:text-left">
             <a href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm">
                 T
@@ -42,7 +37,7 @@ export default function Footer() {
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3 pt-1">
+            <div className="flex items-center justify-center lg:justify-start gap-3.5 pt-2">
               {[
                 { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
                 { icon: FaXTwitter, href: 'https://x.com', label: 'X (Twitter)' },
@@ -57,9 +52,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={soc.label}
-                    className="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-900 transition-all shadow-xs"
+                    className="w-11 h-11 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-indigo-600 hover:border-indigo-600 transition-all shadow-xs active:scale-95"
                   >
-                    <Icon className="w-3.5 h-3.5" />
+                    <Icon className="w-5 h-5" />
                   </a>
                 );
               })}
@@ -67,7 +62,7 @@ export default function Footer() {
           </div>
 
           {/* Col 2: Contact Details */}
-          <div className="lg:col-span-5 space-y-3">
+          <div className="lg:col-span-5 space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest font-heading">Contact Details</h4>
             <div className="space-y-2 text-sm text-slate-600 font-medium">
               <p>Email: <a href="mailto:hello@thinkbuild.agency" className="text-slate-900 font-bold hover:underline break-all">hello@thinkbuild.agency</a></p>
@@ -79,26 +74,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} ThinkBuild Agency LLC. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-6 justify-center">
             <a href="#privacy" onClick={(e) => { e.preventDefault(); alert("Privacy Policy: ThinkBuild protects client confidentiality and user data."); }} className="hover:text-slate-900 transition-colors">
               Privacy Policy
             </a>
             <a href="#terms" onClick={(e) => { e.preventDefault(); alert("Terms of Service: All engagement terms defined in master service agreements."); }} className="hover:text-slate-900 transition-colors">
               Terms of Service
             </a>
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 p-2 sm:px-3 sm:py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-slate-900 hover:border-slate-400 transition-all cursor-pointer shadow-xs"
-              aria-label="Back to top"
-            >
-              <span className="hidden sm:inline">Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
           </div>
         </div>
 
@@ -106,3 +93,4 @@ export default function Footer() {
     </footer>
   );
 }
+
