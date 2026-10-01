@@ -9,7 +9,7 @@ export default function Footer() {
       const navOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
-        top: elementPosition - navOffset,
+        top: Math.max(0, elementPosition - navOffset),
         behavior: 'smooth'
       });
     }

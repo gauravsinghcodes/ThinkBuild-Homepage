@@ -19,15 +19,18 @@ export default function Navbar() {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      const navOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - navOffset,
-        behavior: 'smooth'
-      });
-    }
+    
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        const navOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: Math.max(0, elementPosition - navOffset),
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   return (
