@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">RVCanvas Logo</title>
+  <desc id="desc">A dark navy rounded square containing an interlocking white R and blue-violet V.</desc>
+
+  <defs>
+    <linearGradient id="vGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5968E8"/>
+      <stop offset="55%" stop-color="#6677F0"/>
+      <stop offset="100%" stop-color="#8A96F5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="38" y="38" width="436" height="436" rx="94" fill="#0E152A"/>
+
+  <!-- White geometric R -->
+  <path
+    d="M124 144
+       H242
+       C282 144 306 165 306 199
+       C306 221 294 238 274 247
+       C290 256 300 269 307 287
+       L329 345
+       H268
+       L246 294
+       C241 282 235 277 221 277
+       H182
+       V345
+       H124
+       V144
+       Z
+       M182 192
+       V231
+       H230
+       C244 231 251 224 251 211
+       C251 198 243 192 229 192
+       Z"
+    fill="#F8F9FC"/>
+
+  <!-- Ribbon-like V -->
+  <path
+    d="M231 192
+       C251 192 267 198 278 211
+       L316 274
+       L359 202
+       C364 194 371 190 381 190
+       H414
+       L350 303
+       C339 322 329 345 306 345
+       C286 345 276 333 266 316
+       L218 236
+       C210 223 211 208 220 199
+       C223 195 227 192 231 192
+       Z"
+    fill="url(#vGradient)"/>
+
+  <!-- Clean V right stroke -->
+  <path
+    d="M316 274
+       L359 202
+       C364 194 371 190 381 190
+       H414
+       L350 303
+       C339 322 329 345 306 345
+       C298 345 291 342 285 337
+       C296 329 302 318 309 305
+       Z"
+    fill="url(#vGradient)"/>
+</svg>

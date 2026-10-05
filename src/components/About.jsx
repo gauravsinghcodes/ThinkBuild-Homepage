@@ -60,13 +60,13 @@ export default function About() {
           {/* Left Heading & Intro */}
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs font-bold uppercase tracking-widest text-indigo-600">
-              About ThinkBuild
+              About RVCanvas
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Good Ideas Deserve Great Execution.
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-              ThinkBuild is an independent digital marketing agency. We bridge the gap between editorial visual craftsmanship and rigorous analytical performance.
+              RVCanvas is an independent digital marketing agency. We bridge the gap between editorial visual craftsmanship and rigorous analytical performance.
             </p>
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Our Mission</h3>
@@ -81,7 +81,7 @@ export default function About() {
             <div className="relative rounded-3xl overflow-hidden border border-slate-200 bg-slate-100 aspect-[4/3] shadow-xs">
               <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" 
-                alt="ThinkBuild Studio Strategy Team"
+                alt="RVCanvas Studio Strategy Team"
                 className="w-full h-full object-cover filter brightness-95"
                 loading="lazy"
               />

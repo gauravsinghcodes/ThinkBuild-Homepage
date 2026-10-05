@@ -1,7 +1,7 @@
 export const testimonialsData = [
   {
     id: 1,
-    quote: "ThinkBuild completely transformed our acquisition funnel. Within 90 days of launching our campaign, our B2B pipeline increased by 380% while reducing CAC by nearly half.",
+    quote: "RVCanvas completely transformed our acquisition funnel. Within 90 days of launching our campaign, our B2B pipeline increased by 380% while reducing CAC by nearly half.",
     name: "Marcus Vance",
     role: "Chief Growth Officer",
     company: "Apex Pay Technologies",
@@ -9,7 +9,7 @@ export const testimonialsData = [
   },
   {
     id: 2,
-    quote: "The strategic depth ThinkBuild brings to SEO and content is unmatched. They don't just chase vanity metrics; they build systems that directly drive bottom-line ARR.",
+    quote: "The strategic depth RVCanvas brings to SEO and content is unmatched. They don't just chase vanity metrics; they build systems that directly drive bottom-line ARR.",
     name: "Elena Rostova",
     role: "VP of Marketing",
     company: "NeuroPulse Health",

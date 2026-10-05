@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-indigo-600">
-            Why ThinkBuild
+            Why RVCanvas
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Small Details. Big Impact.

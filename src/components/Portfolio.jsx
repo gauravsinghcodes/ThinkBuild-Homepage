@@ -24,65 +24,61 @@ export default function Portfolio() {
           </p>
         </div>
 
-        {/* 3 Projects Editorial Layout */}
-        <div className="space-y-16">
-          {projectsData.map((project, idx) => {
-            const isReverse = idx % 2 !== 0;
-            return (
-              <div 
-                key={project.id}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xs`}
+        {/* Projects Row Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projectsData.map((project) => (
+            <div 
+              key={project.id}
+              className="flex flex-col justify-between p-6 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+            >
+              {/* Visual Image */}
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.3 }}
+                className="relative rounded-2xl overflow-hidden aspect-[16/10] border border-slate-200 mb-6 cursor-pointer"
+                onClick={() => setSelectedProject(project)}
               >
-                {/* Visual Image */}
-                <div className={`lg:col-span-7 ${isReverse ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <motion.div 
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative rounded-2xl overflow-hidden aspect-[16/10] border border-slate-200 cursor-pointer"
-                  >
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover filter brightness-95 hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                    />
-                  </motion.div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover filter brightness-95 hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </motion.div>
+
+              {/* Content */}
+              <div className="space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400 font-mono mb-2">
+                    <span>{project.category}</span>
+                    <span>{project.year}</span>
+                  </div>
+                  <h3 className="text-xl font-bold font-heading text-slate-900 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    {project.summary}
+                  </p>
                 </div>
 
-                {/* Content */}
-                <div className={`lg:col-span-5 space-y-6 ${isReverse ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400 font-mono mb-2">
-                      <span>{project.category}</span>
-                      <span>{project.year}</span>
-                    </div>
-                    <h3 className="text-2xl sm:text-3xl font-bold font-heading text-slate-900 mb-3">
-                      {project.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                      {project.summary}
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-emerald-700 font-mono">
+                <div className="space-y-4 pt-2">
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-emerald-700 font-mono">
                     ⚡ {project.results}
                   </div>
 
-                  <div>
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 transition-colors shadow-xs"
-                    >
-                      <span>View Project Details</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 transition-colors shadow-xs"
+                  >
+                    <span>View Case Details</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </button>
                 </div>
-
               </div>
-            );
-          })}
+
+            </div>
+          ))}
         </div>
 
       </div>
@@ -95,7 +91,7 @@ export default function Portfolio() {
           title={`${selectedProject.title} — Case Details`}
         >
           <div className="space-y-6">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] border border-slate-200">
+            <div className="relative rounded-2xl overflow-hidden h-44 sm:h-52 w-full border border-slate-200 bg-slate-100">
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title}

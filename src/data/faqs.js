@@ -22,11 +22,11 @@ export const faqsData = [
   {
     id: 5,
     question: "Can I choose individual services?",
-    answer: "Absolutely. While our integrated growth frameworks deliver maximum multi-channel synergy, you can engage ThinkBuild for standalone projects such as custom React web design, dedicated SEO overhauls, or performance ad management."
+    answer: "Absolutely. While our integrated growth frameworks deliver maximum multi-channel synergy, you can engage RVCanvas for standalone projects such as custom React web design, dedicated SEO overhauls, or performance ad management."
   },
   {
     id: 6,
     question: "How do we get started?",
-    answer: "Simply fill out our project inquiry form below or email us at hello@thinkbuild.agency. Our senior growth team will review your objectives and schedule a 30-minute discovery consultation with actionable insights."
+    answer: "Simply fill out our project inquiry form below or email us at hello@rvcanvas.agency. Our senior growth team will review your objectives and schedule a 30-minute discovery consultation with actionable insights."
   }
 ];

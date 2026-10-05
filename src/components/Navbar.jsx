@@ -19,7 +19,7 @@ export default function Navbar() {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
+
     setTimeout(() => {
       const element = document.querySelector(href);
       if (element) {
@@ -34,34 +34,33 @@ export default function Navbar() {
   };
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-[#faf8f5]/90 backdrop-blur-md border-b border-slate-200/80 py-4 shadow-xs' 
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+          ? 'bg-[#faf8f5]/90 backdrop-blur-md border-b border-slate-200/80 py-4 shadow-xs'
           : 'bg-transparent py-6'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Agency Wordmark */}
-          <a 
-            href="#hero" 
+          <a
+            href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
             className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="w-8.5 h-8.5 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm group-hover:bg-indigo-600 transition-colors shadow-xs overflow-hidden p-1.5">
-              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 22 26 H 78 V 38 H 56 V 76 H 44 V 38 H 22 V 26 Z" fill="currentColor"/>
-                <rect x="58" y="48" width="18" height="28" rx="6" fill="#818cf8"/>
-                <circle cx="67" cy="32" r="5" fill="#a5b4fc"/>
-              </svg>
+            <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm group-hover:bg-indigo-600 transition-colors shadow-xs overflow-hidden p-1.5">
+              <img
+                src="/Logo.svg"
+                alt="RVCanvas Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900">
-              Think<span className="text-indigo-600">Build</span>
+              RV<span className="text-indigo-600">Canvas</span>
             </span>
           </a>
 
@@ -108,7 +107,7 @@ export default function Navbar() {
       {/* Mobile Menu Slide-Down */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

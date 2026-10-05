@@ -97,7 +97,7 @@ export default function Contact() {
 
               <div className="space-y-4 pt-2">
                 <a
-                  href="https://wa.me/15550192834?text=Hi%20ThinkBuild%20Team,%20I'd%20like%20to%20discuss%20a%20digital%20marketing%20project."
+                  href="https://wa.me/15550192834?text=Hi%20RVCanvas%20Team,%20I'd%20like%20to%20discuss%20a%20digital%20marketing%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 hover:bg-emerald-100 transition-all text-sm font-semibold group overflow-hidden"
@@ -112,7 +112,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="mailto:hello@thinkbuild.agency?subject=Project%20Inquiry%20-%20ThinkBuild"
+                  href="mailto:hello@rvcanvas.agency?subject=Project%20Inquiry%20-%20RVCanvas"
                   className="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 hover:bg-slate-100 transition-all text-sm font-semibold group overflow-hidden"
                 >
                   <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center shrink-0">
@@ -120,7 +120,7 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0 flex-1">
                     <span className="block text-slate-900 truncate">Direct Email</span>
-                    <span className="text-xs text-indigo-600 font-mono font-semibold block break-all">hello@thinkbuild.agency</span>
+                    <span className="text-xs text-indigo-600 font-mono font-semibold block break-all">hello@rvcanvas.agency</span>
                   </div>
                 </a>
               </div>

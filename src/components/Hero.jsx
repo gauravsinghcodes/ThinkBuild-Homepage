@@ -111,7 +111,7 @@ export default function Hero() {
               className="relative w-full max-w-sm aspect-[4/3] sm:aspect-square rounded-3xl bg-gradient-to-tr from-slate-100 via-white to-slate-50 border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between shadow-xs transition-shadow hover:shadow-md"
             >
               <div className="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-widest">
-                <span>ThinkBuild Studio</span>
+                <span>RVCanvas Studio</span>
                 <span>Est. 2026</span>
               </div>
 
